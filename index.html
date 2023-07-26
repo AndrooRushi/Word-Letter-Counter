@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>Word-Letter Counter</title>
+	<style>
+		*{
+			background-color: #474747;
+			font-size: 30px;
+			font-family: "Cambria"
+		}
+		#str {
+			resize:none;
+			border: 3px solid black;
+		}
+		#parent{
+			margin-top: 10%;
+		}
+		h1{
+			width: 30%;
+    			border: 3px solid black;
+		}
+	</style>
+</head>
+
+<body>
+
+
+
+<center>
+<div id = "parent">
+<h1>Word-Letter Counter</h1>
+<form>
+
+<textarea placeholder = "Enter anything" id = "str" rows = 5 cols = 30></textarea>
+</form>
+<h1 id = "ans"> </h1>
+</div>
+</center>
+<script>
+
+	let str = document.getElementById("str");
+	let ans = document.getElementById("ans");
+		
+	str.addEventListener("input", function(){
+		let cc = 0, wc = 0;
+		for(let s of str.value){
+			if (s != " ")	cc++;
+	}	
+		wc =  str.value.split(" ").length;
+		ans.innerHTML = "Letters = " + cc + " Words = " + wc;
+		
+	});
+
+	cel.addEventListener("input", function(){
+		let c = parseFloat(cel.value);
+		let f = (c * 9/5) + 32;
+		fah.value = f.toFixed(2);
+	});
+
+
+</script>
+
+
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
